@@ -1,9 +1,3 @@
-/**
- * Including Swal Alert
- */
-
-let SwalAlert = document.createElement('script');
-    SwalAlert.setAttribute('src', "https://unpkg.com/sweetalert/dist/sweetalert.min.js");
 
 class Rut{
   /**
@@ -136,4 +130,14 @@ function AssingRut(){
           delete rut;
       };
   });
-} 
+}
+
+$(document).ready(function(){
+    let SwalAlert   = $('<script></script>', {
+        type    = 'text/script',
+        src     = 'https://unpkg.com/sweetalert/dist/sweetalert.min.js',
+    });
+
+    $('body').append(SwalAlert);
+    AssingRut();
+});
