@@ -142,14 +142,14 @@ class Rut{
         let id  = 'rut';
     
         $( eval("'#" + id + "'") ).change( function(e){
-            try{ delete(rut); }catch(error){ console.log('Error to delete the variable Rut'); }
+            try{ rut    = undefined; }catch(error){ console.log('Error to delete the variable Rut'); }
             
             let rut = new Rut(this.value, false, true);
             rut.format(id);
         
             if( !rut.isValid(id) ){
                 swal("Error!", "El rut ingresado no es válido!", "error");
-                delete rut;
+                rut = undefined;
             };
         });
   });
@@ -158,14 +158,14 @@ class Rut{
       let id  = 'rut';
   
       $( eval("'#" + id + "'") ).change( function(e){
-          try{ delete(rut); }catch(error){ console.log('Error to delete the variable Rut'); }
+          try{ rut = undefined; }catch(error){ console.log('Error to delete the variable Rut'); }
           
           let rut = new Rut(this.value, false, true);
           rut.format(id);
       
           if( !rut.isValid(id) ){
               swal("Error!", "El rut ingresado no es válido!", "error");
-              delete rut;
+              rut = undefined;
           };
       });
   }
