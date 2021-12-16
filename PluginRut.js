@@ -44,16 +44,6 @@ class Rut{
         return this._verificator;
     }
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
     /**
      * @param {string} id : Id of the input to set the rut. In other case put "" 
      */
