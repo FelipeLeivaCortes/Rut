@@ -179,7 +179,11 @@ $(document).ready(function () {
     rut.format(id);
 
     if (!rut.isValid(id)) {
-      swal("Error!", "El rut ingresado no es válido!", "error");
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'El rut ingresado no es válido!',
+      })
       rut = undefined;
     }
 
@@ -200,7 +204,11 @@ function AssingRut() {
     rut.format(id);
 
     if (!rut.isValid(id)) {
-      swal("Error!", "El rut ingresado no es válido!", "error");
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'El rut ingresado no es válido!',
+      })
       rut = undefined;
     }
 
